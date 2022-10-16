@@ -1,0 +1,26 @@
+void main(List<String> args) {
+  Persona est = new Persona();
+  est.nombre = "Alex";
+  est.apaterno = "Mata";
+  est.amaterno = "Lopez";
+  est.aNacimiento = 1971;
+  est.showName(est.nombre, est.apaterno, est.amaterno);
+  print("Tienes ${est.calcularEdad(est.aNacimiento)} años");
+  est.showName2();
+}
+
+class Persona {
+  String nombre = " ";
+  String apaterno = " ";
+  String amaterno = " ";
+  int aNacimiento = 0;
+
+  int calcularEdad(int aNacimiento) => 2022 - aNacimiento;
+  void showName(String nombre, String apaterno, String amaterno) {
+   print("$nombre $apaterno $amaterno");
+  }
+
+ void showName2(){
+   print("$apaterno $amaterno $nombre"); 
+ }
+}
